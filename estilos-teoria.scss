@@ -1,0 +1,246 @@
+@use "sass:color";
+
+
+//* RESET ==========
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//* VARIABLES ==========
+
+$magenta: #ea4f79;
+$blue: #42acdc;
+$yellow: #fcc049;
+$orange: #ea5730;
+$mint: #b7dbc4;
+$dark-mint: #83c6a3;
+$purple: #e5b3ff;
+$dark-gray: #303030;
+$dark: #232323;
+$black: #1d1d1d;
+$light: #fafafa;
+$shadow: 0px 3px 0 0 rgb(0 0 0 / 0.2);
+
+
+//* BÁSICOS ==========
+
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+p, li {
+  font-size: 1.2rem;
+}
+
+
+button {
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
+  border-radius: 0;
+  border: 2px solid $dark;
+  background-color: $magenta;
+  color: white;
+  box-shadow: $shadow;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: lighten($magenta, 10%);
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0;
+  border: 2px solid $dark;
+  outline: none;
+  box-shadow: $shadow;
+}
+
+
+
+//* UTILIDADES ==========
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-magenta {
+  background-color: $magenta;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-yellow {
+  background-color: $yellow;
+}
+.bg-orange {
+  background-color: $orange;
+}
+.bg-mint {
+  background-color: $mint;
+}
+.bg-dark-mint {
+  background-color: $dark-mint;
+}
+.bg-purple {
+  background-color: $purple;
+}
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
+.bg-dark {
+  background-color: $dark;
+}
+.bg-black {
+  background-color: $black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-dark {
+  color: $dark;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+
+.border-0 {
+  border: 0px solid $dark;
+}
+.border-1 {
+  border: 1px solid $dark;
+}
+.border-2 {
+  border: 2px solid $dark;
+}
+.border-3 {
+  border: 3px solid $dark;
+}
+.border-4 {
+  border: 4px solid $dark;
+}
+
+.border-light {
+  border-color: $light;
+}
+
+.border-dark {
+  border-color: $dark;
+}
+
+
+
+
+//* CAJAS ==========
+
+.padre {
+  border: 3px solid $dark;
+  padding: 1rem;
+  box-shadow: $shadow;
+}
+
+.hijo {
+  border: 3px solid $light;
+  padding: 1rem;
+  width: 100px;
+}
