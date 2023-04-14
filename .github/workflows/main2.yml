@@ -1,0 +1,12 @@
+name: sass to css
+on: [push]
+jobs:
+  compile-sass:
+    runs-on: ubuntu-latest
+    steps:      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '17'
+      - run: npm install -g sass
+      - run: sass /sass:/css
+      
