@@ -1,0 +1,230 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+p, li {
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
+  border-radius: 0;
+  border: 2px solid #232323;
+  background-color: #ea4f79;
+  color: white;
+  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #ef7d9c;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input, select {
+  margin: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0;
+  border: 2px solid #232323;
+  outline: none;
+  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+select {
+  padding: 0.6rem 0.8rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-magenta {
+  background-color: #ea4f79;
+}
+
+.bg-blue {
+  background-color: #42acdc;
+}
+
+.bg-yellow {
+  background-color: #fcc049;
+}
+
+.bg-orange {
+  background-color: #ea5730;
+}
+
+.bg-mint {
+  background-color: #b7dbc4;
+}
+
+.bg-dark-mint {
+  background-color: #83c6a3;
+}
+
+.bg-purple {
+  background-color: #e5b3ff;
+}
+
+.bg-dark-gray {
+  background-color: #303030;
+}
+
+.bg-dark {
+  background-color: #232323;
+}
+
+.bg-black {
+  background-color: #1d1d1d;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-dark {
+  color: #232323;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.border-0 {
+  border: 0px solid #232323;
+}
+
+.border-1 {
+  border: 1px solid #232323;
+}
+
+.border-2 {
+  border: 2px solid #232323;
+}
+
+.border-3 {
+  border: 3px solid #232323;
+}
+
+.border-4 {
+  border: 4px solid #232323;
+}
+
+.border-light {
+  border-color: #fafafa;
+}
+
+.border-dark {
+  border-color: #232323;
+}
+
+.padre {
+  border: 3px solid #232323;
+  padding: 1rem;
+  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.hijo {
+  border: 3px solid #fafafa;
+  padding: 1rem;
+  width: 100px;
+}
+
+/*# sourceMappingURL=estilos-teoria.css.map */
