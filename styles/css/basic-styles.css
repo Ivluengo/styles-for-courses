@@ -11,6 +11,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -76,8 +78,60 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
-p, li {
-  font-size: 1.2rem;
+p, li, td, th {
+  font-size: clamp(1rem, 0.7vw + 0.8rem, 1.4rem);
+}
+
+small, .small {
+  font-size: clamp(0.9rem, 0.6vw + 0.7rem, 1.2rem);
+}
+
+a {
+  display: inline-block;
+  font-size: clamp(1rem, 0.7vw + 0.8rem, 1.4rem);
+  text-decoration: none;
+  color: #ea4f79;
+  position: relative;
+}
+a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background-color: #ea4f79;
+  width: 100%;
+  bottom: 2px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.05s ease;
+}
+a:hover::after {
+  transition: transform 0.5s ease;
+  transform: scaleY(1);
+}
+
+h1, .h1 {
+  font-size: clamp(2.3rem, 1.6vw + 1.9rem, 3.2rem);
+}
+
+h2, .h2 {
+  font-size: clamp(2rem, 1.4vw + 1.7rem, 2.8rem);
+}
+
+h3, .h3 {
+  font-size: clamp(1.7rem, 1.2vw + 1.5rem, 2.4rem);
+}
+
+h4, .h4 {
+  font-size: clamp(1.5rem, 1vw + 1.3rem, 2.1rem);
+}
+
+h5, .h5 {
+  font-size: clamp(1.3rem, 0.9vw + 1.1rem, 1.8rem);
+}
+
+h6, .h6 {
+  font-size: clamp(1.1rem, 0.8vw + 1rem, 1.6rem);
 }
 
 button {
@@ -89,32 +143,79 @@ button {
   color: white;
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
   font-weight: 500;
+  transition: background-color 0.1s ease;
 }
 
 button:hover {
+  transition: background-color 0.5s ease;
   background-color: #ef7d9c;
+}
+
+::placeholder, input[type=date] {
+  color: #b9b9b9;
 }
 
 label {
   font-size: 1.3rem;
 }
 
-input, select {
+input, progress {
+  accent-color: #ea4f79;
+}
+
+input {
   margin: 0.5rem;
   padding: 0.5rem 0.8rem;
   border-radius: 0;
   border: 2px solid #232323;
   outline: none;
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
-select {
-  padding: 0.6rem 0.8rem;
+input:focus-visible {
+  box-shadow: 0px 4px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+input[type=checkbox], input[type=radio] {
+  width: 1.2rem;
+  height: 1.2rem;
+  box-shadow: none;
+  position: relative;
+  top: 3px;
+}
+
+input[type=range] {
+  box-shadow: none;
+  border: none;
+  margin-block: 0;
+  padding-block: 0;
+  position: relative;
+  top: 3px;
+}
+
+input[type=color] {
+  padding: 0 0.2rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 4px solid #232323;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+th, td {
+  border: 2px solid #232323;
+}
+
+th, td {
+  padding: 0.5rem;
 }
 
 .container {
   width: 80%;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 2rem auto;
 }
 
@@ -125,10 +226,8 @@ select {
 }
 
 .center-vertical {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
 }
 
 .bg-magenta {
@@ -171,12 +270,44 @@ select {
   background-color: #1d1d1d;
 }
 
-.text-white {
-  color: white;
+.text-magenta {
+  background-color: #ea4f79;
+}
+
+.text-blue {
+  background-color: #42acdc;
+}
+
+.text-yellow {
+  background-color: #fcc049;
+}
+
+.text-orange {
+  background-color: #ea5730;
+}
+
+.text-mint {
+  background-color: #b7dbc4;
+}
+
+.text-dark-mint {
+  background-color: #83c6a3;
+}
+
+.text-purple {
+  background-color: #e5b3ff;
+}
+
+.text-dark-gray {
+  background-color: #303030;
 }
 
 .text-dark {
-  color: #232323;
+  background-color: #232323;
+}
+
+.text-black {
+  background-color: #1d1d1d;
 }
 
 .text-center {
@@ -215,10 +346,63 @@ select {
   border-color: #232323;
 }
 
+.m-0 {
+  margin: 0;
+}
+
+.mt-1 {
+  margin: 0.25rem;
+}
+
+.mt-2 {
+  margin: 0.5rem;
+}
+
+.mt-3 {
+  margin: 0.75rem;
+}
+
+.mt-4 {
+  margin: 1rem;
+}
+
+.mt-5 {
+  margin: 1.5rem;
+}
+
+.mb-1 {
+  margin: 0.25rem;
+}
+
+.mb-2 {
+  margin: 0.5rem;
+}
+
+.mb-3 {
+  margin: 0.75rem;
+}
+
+.mb-4 {
+  margin: 1rem;
+}
+
+.mb-5 {
+  margin: 1.5rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.not-underline {
+  text-decoration: none;
+}
+
 .padre {
   border: 3px solid #232323;
   padding: 1rem;
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
 }
 
 .hijo {
@@ -226,5 +410,3 @@ select {
   padding: 1rem;
   width: 100px;
 }
-
-/*# sourceMappingURL=estilos-teoria.css.map */
