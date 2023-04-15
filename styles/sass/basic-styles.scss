@@ -114,7 +114,7 @@ body {
   font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
-p, li, td, th {
+p, li, td, th, label, button {
   font-size: $size-base;
 }
 
@@ -180,7 +180,6 @@ button {
   background-color: $magenta;
   color: white;
   box-shadow: $shadow;
-  font-weight: 500;
   transition: background-color 0.1s ease;
 }
 
@@ -195,15 +194,13 @@ button:hover {
 ::placeholder, input[type="date"] {
   color: $light-gray;
 }
-label {
-  font-size: 1.3rem;
-}
+
 
 input, progress {
   accent-color: $magenta;
 }
 
-input {
+input, select {
   margin: 0.5rem;
   padding: 0.5rem 0.8rem;
   border-radius: 0;
@@ -212,6 +209,10 @@ input {
   box-shadow: $shadow;
   transition: box-shadow 0.3s ease;
 }
+select {
+  padding: 0.6rem 0.8rem;
+}
+
 
 input:focus-visible {
   box-shadow: $shadow-hover;

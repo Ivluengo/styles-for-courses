@@ -78,7 +78,7 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
-p, li, td, th {
+p, li, td, th, label, button {
   font-size: clamp(1rem, 0.7vw + 0.8rem, 1.4rem);
 }
 
@@ -142,7 +142,6 @@ button {
   background-color: #ea4f79;
   color: white;
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
-  font-weight: 500;
   transition: background-color 0.1s ease;
 }
 
@@ -155,15 +154,11 @@ button:hover {
   color: #b9b9b9;
 }
 
-label {
-  font-size: 1.3rem;
-}
-
 input, progress {
   accent-color: #ea4f79;
 }
 
-input {
+input, select {
   margin: 0.5rem;
   padding: 0.5rem 0.8rem;
   border-radius: 0;
@@ -171,6 +166,10 @@ input {
   outline: none;
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
+}
+
+select {
+  padding: 0.6rem 0.8rem;
 }
 
 input:focus-visible {
